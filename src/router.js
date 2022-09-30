@@ -3,7 +3,7 @@ import getPhone from './components/Phone/index.js';
 import getConsole from './components/Console/index.js';
 import getComputer from './components/Computer/index.js';
 import getAppliances from './components/Appliances/index.js';
-
+import getOnePhone from "./components/Phone/OnePhone.js";
 import Routes from './commons/Routes.js';
 
 const router = async (route) => {
@@ -17,6 +17,13 @@ const router = async (route) => {
             break;
         case Routes.phone:
             content.appendChild(getPhone());
+            break;
+        case `${Routes.phone}/1`:
+        case `${Routes.phone}/2`:
+        case `${Routes.phone}/3`:
+        case `${Routes.phone}/4`:
+        case `${Routes.phone}/5`:
+            content.appendChild(getOnePhone());
             break;
         case Routes.console:
             content.appendChild(getConsole());

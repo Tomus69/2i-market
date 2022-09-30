@@ -15,10 +15,10 @@ export default function getPhoneCard(parent) {
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
-                        ${phone.price}€
+                        ${phone.price}€ ${phone.brand === 'Apple' ? `<span class="badge text-bg-warning">Promo -20%</span>` : ''}
                     </li>
                     <li class="list-group-item">
-                        <a href=${Routes.phone} class="btn btn-dark">Détails</a>
+                        <a href=${Routes.phone + "/" + phone.id} class="btn btn-dark">Détails</a>
                     </li>
                 </ul>
             </div>
